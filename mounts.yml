@@ -2,9 +2,15 @@
 - name: Create volume mounts
   hosts: localhost
   tasks:
+  - name: Create a ext4 filesystem on /dev/sdb1 and check disk blocks
+    filesystem:
+      fstype: ext4
+      dev: /dev/xvdb
+  - name: Create directory
+    file: path=/backup state=directory
   - name: Mount backup disk
     mount:
       path: /backup
-      src: /dev/sdb
+      src: /dev/xvdb
       fstype: ext4
       state: present
