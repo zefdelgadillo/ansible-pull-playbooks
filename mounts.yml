@@ -6,4 +6,5 @@
     mount:
       path: /backup
       src: /dev/sdb
+      fstype: ext4
       state: present
