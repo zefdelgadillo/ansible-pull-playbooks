@@ -13,4 +13,4 @@
       path: /backup
       src: /dev/xvdb
       fstype: ext4
-      state: present
+      state: mounted
