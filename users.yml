@@ -1,0 +1,13 @@
+---
+- name: Create users
+  hosts: localhost
+  tasks:
+  - name: Add the user 'zefdelgadillo'
+    user:
+      name: zefdelgadillo
+      group: ec2-user
+  - name: Set authorized keys to include public key
+    authorized_key:
+      user: zefdelgadillo
+      state: present
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVFVbcJ0uIQYifJTULAx/qZxd9/bgVNmnLs1TkhntBZtx3xeqC6CJigyzqDX14HAcMCAzUXC+1n9g2ixjNClH75g/8xP/BxfLZaILUze3U7P7cHKr2jOqLkch8Qinygp8LifiS+DrnMq+WBhekD+JVLpqt6rCmIhS4a1pIynHD195C0uueHrUb2XFPya3P9sk6pyi2MsrwkuAGWWoCG7In3cNprUWY9kPJQ5E3MjtMIQ14LjhTHMk/CPRpkVeaY0vieErpLYtzCEsydMSSYb+9un0Fr+MFNMy7jsYl+txsTmRPnTLGojsHzWZfMUKkivupjS6lrNiqPOh74KvdCWDB zef.delgadillo@cloudreach.com"

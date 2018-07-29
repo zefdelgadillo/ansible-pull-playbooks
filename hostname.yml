@@ -1,0 +1,7 @@
+---
+- name: set hostname
+  hosts: localhost
+  tasks:
+  - name: Set hostname
+    hostname:
+      name: "{{ hostname }}"
