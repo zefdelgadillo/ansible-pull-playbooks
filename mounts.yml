@@ -1,0 +1,9 @@
+---
+- name: Create volume mounts
+  hosts: localhost
+  tasks:
+  - name: Mount backup disk
+    mount:
+      path: /backup
+      src: /dev/sdb
+      state: present
