@@ -1,4 +1,4 @@
 ---
+- include: mounts.yml
 - include: hostname.yml
 - include: users.yml
-- include: mounts.yml
